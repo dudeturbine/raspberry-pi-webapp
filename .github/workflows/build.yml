@@ -26,6 +26,6 @@ jobs:
       - name: Build and push multi-architecture image
         run: |
           docker buildx build \
-            --platform linux/arm/v7,linux/amd64 \
+            --platform linux/arm/v6,linux/amd64 \
             -t ghcr.io/${{ github.repository }}:latest \
             --push .
