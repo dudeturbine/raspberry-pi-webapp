@@ -1,5 +1,10 @@
 from flask import Flask
+from supporters.test_utils import test_bp
+
 app = Flask(__name__)
+
+# register supporters
+app.register_blueprint(test_bp)
 
 @app.route('/')
 def hello():
